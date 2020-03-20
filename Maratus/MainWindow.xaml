@@ -21,8 +21,8 @@
             </StackPanel>
             <StackPanel DockPanel.Dock="Left" Width="229">
                 <Button x:Name="continueButton" Content="Возобновить" Margin="10,5,10,0" Height="50" Click="ContinueButton_Click"/>
-                <Button x:Name="stopButton" Content="СТОП"  Margin="10,5,10,0" Height="50"/>
-                <Button x:Name="newSearchButton" Content="Новый поиск" Margin="10,5,10,0" Height="50"/>
+                <Button x:Name="stopButton" Content="СТОП"  Margin="10,5,10,0" Height="50" Click="StopButton_Click"/>
+                <Button x:Name="newSearchButton" Content="Новый поиск" Margin="10,5,10,0" Height="50" Click="NewSearchButton_Click"/>
                 <Label HorizontalContentAlignment="Center" Content="Найдено тел. номеров:" Margin="0,40,0,0"/>
                 <TextBlock Text="0" HorizontalAlignment="Center" FontSize="40"></TextBlock>
                 <Label HorizontalContentAlignment="Center">Найдено e-mail адресов:</Label>
