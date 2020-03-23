@@ -22,7 +22,7 @@ namespace Maratus
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string filePath = @"~\Files\URI_List.txt";
+        public string filePath = @"\Files\URI_List.txt";
 
 
         public MainWindow()
@@ -33,30 +33,24 @@ namespace Maratus
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void ContinueButton_Click(object sender, RoutedEventArgs e)
         {
-                        //FileHandler fh = new FileHandler()
+
         }
 
-        private void NewSearchButton_Click(object sender, RoutedEventArgs e)
+        async private void NewSearchButton_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            
-            openFileDialog.RestoreDirectory = true; //
-            openFileDialog.Title = "Выберите текстовый файл со ссылками";
-            openFileDialog.InitialDirectory = "c:\\";
-            openFileDialog.DefaultExt = "txt";
-            openFileDialog.Filter = "Text files |*.txt";
-            openFileDialog.ReadOnlyChecked = true;
-            openFileDialog.ShowReadOnly = true;
-            openFileDialog.ShowDialog();
-            if (ShowDialog()==true)
-            {
 
-            }
+            await Task.Run(() =>
+            {
+                FileHandler fh = new FileHandler(FileHandler.GetFileNameUsingDialog());
+                progressBar.Value = 100;
+            });
+
+
         }
 
         private void StopButton_Click(object sender, RoutedEventArgs e)

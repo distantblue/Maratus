@@ -17,10 +17,12 @@
                 <Image  Source="/Pictures/server.png" Height="200" Margin="25"/>
             </StackPanel>
             <StackPanel DockPanel.Dock="top">
-                <TextBlock Margin="10,5,5,0">Строка состояния подключения</TextBlock>
+                <TextBlock Margin="10,5,5,0" Text="Строка состояния подключения"/>
+                
             </StackPanel>
             <StackPanel DockPanel.Dock="Left" Width="229">
                 <Button x:Name="continueButton" Content="Возобновить" Margin="10,5,10,0" Height="50" Click="ContinueButton_Click"/>
+                <ProgressBar x:Name="progressBar" Height="10" Width="100" Margin="0,5,0,0" IsEnabled="False"/>
                 <Button x:Name="stopButton" Content="СТОП"  Margin="10,5,10,0" Height="50" Click="StopButton_Click"/>
                 <Button x:Name="newSearchButton" Content="Новый поиск" Margin="10,5,10,0" Height="50" Click="NewSearchButton_Click"/>
                 <Label HorizontalContentAlignment="Center" Content="Найдено тел. номеров:" Margin="0,40,0,0"/>
